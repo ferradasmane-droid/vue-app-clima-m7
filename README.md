@@ -10,49 +10,35 @@ La aplicación consume datos reales desde la API Open-Meteo para mostrar el clim
 
 Recrear una aplicación del clima utilizando Vue, separando la lógica en componentes, vistas, rutas, datos y servicios.
 
-## Tecnologías utilizadas
+
+## Vistas principales
+
+### Inicio
+
+La vista Inicio muestra el listado de ciudades de Chiloé en tarjetas. Cada tarjeta presenta una imagen, nombre de la ciudad, país, estado del clima, temperatura, humedad, viento y un botón para acceder al detalle.
+
+También incluye un buscador mediante `v-model` y un selector para cambiar la unidad de temperatura entre Celsius y Fahrenheit.
+
+### Detalle
+
+La vista Detalle muestra información ampliada de la ciudad seleccionada mediante una ruta dinámica `/detalle/:id`.
+
+En esta vista se presenta el clima actual, el pronóstico semanal y las estadísticas de la semana, como temperatura mínima, máxima y promedio.
+
+### ℹ️ Acerca
+
+La vista Acerca muestra información general del proyecto, las tecnologías utilizadas, las funcionalidades principales y el uso de la API Open-Meteo.
+
+## 🛠️ Tecnologías utilizadas
 
 - Vue 3
 - Vite
 - Vue Router
-- Composition API
-- Script setup
+- Composition API con `<script setup>`
 - JavaScript
 - CSS
 - Open-Meteo API
 - Git y GitHub
-
-## Funcionalidades
-
-- Visualización de ciudades en cards.
-- Consulta del clima actual desde Open-Meteo.
-- Vista de detalle por ciudad.
-- Pronóstico semanal.
-- Estadísticas de temperatura mínima, máxima y promedio.
-- Buscador de ciudades.
-- Cambio de unidad entre Celsius y Fahrenheit.
-- Navegación sin recargar la página.
-- Diseño responsive.
-
-## Rutas
-
-- `/` : Vista principal con listado de ciudades.
-- `/detalle/:id` : Vista de detalle de una ciudad seleccionada.
-- `/about` : Acerca, muestra información sobre la aplicación, la API utilizada y las tecnologías del proyecto.
-
-## Directivas y recursos de Vue usados
-
-- `v-for` para recorrer ciudades y pronóstico.
-- `v-if` para mensajes de carga, error y ciudad no encontrada.
-- `v-show` para mostrar cantidad de resultados.
-- `v-model` para el buscador y selector de unidad.
-- `@submit.prevent` para controlar el formulario.
-- `@click` para limpiar la búsqueda.
-- `RouterLink` para navegar entre vistas.
-- `RouterView` para mostrar las rutas.
-- `ref` para datos reactivos.
-- `computed` para datos calculados.
-- `onMounted` para consumir la API al cargar la vista.
 
 ## Estructura del proyecto
 
@@ -83,10 +69,62 @@ vue-app-clima/
 └── README.md
 ```
 
-## Instalación
+##  🔗 Repositorio
+
+💻 [Ver repositorio en GitHub](https://github.com/ferradasmane-droid/vue-app-clima-m6)
+
+## 🧭 Rutas
+
+
+- `/` : Vista principal con listado de ciudades.
+- `/detalle/:id` : Vista de detalle de una ciudad seleccionada.
+- `/about` : Acerca, muestra información sobre la aplicación, la API utilizada y las tecnologías del proyecto.
+
+
+## Funcionalidades
+
+- Visualización de ciudades de Chiloé en tarjetas.
+- Consumo de datos reales desde Open-Meteo.
+- Búsqueda de ciudades mediante `v-model`.
+- Cambio de unidad entre Celsius y Fahrenheit.
+- Vista de detalle por ciudad.
+- Pronóstico semanal.
+- Estadísticas de temperatura mínima, máxima y promedio.
+- Colores dinámicos en tarjetas según el estado del clima.
+- Vista Acerca con información del proyecto.
+- Navegación interna sin recargar la página usando Vue Router.
+
+
+## Directivas y recursos de Vue usados
+
+- `v-for` para recorrer ciudades y pronóstico.
+- `v-if` para mensajes de carga, error y ciudad no encontrada.
+- `v-show` para mostrar cantidad de resultados.
+- `v-model` para el buscador y selector de unidad.
+- `@submit.prevent` para controlar el formulario.
+- `@click` para limpiar la búsqueda.
+- `RouterLink` para navegar entre vistas.
+- `RouterView` para mostrar las rutas.
+- `ref` para datos reactivos.
+- `computed` para datos calculados.
+- `onMounted` para consumir la API al cargar la vista.
+
+
+
+## 🚀 Instalación
+
+Para instalar las dependencias del proyecto:
 
 ```bash
 npm install
+```
+
+## Ejecutar el proyecto
+
+Para iniciar el servidor de desarrollo
+
+```bash
+npm run dev
 ```
 
 ## Autora
