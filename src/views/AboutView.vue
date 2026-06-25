@@ -12,10 +12,10 @@
       longitud para cada ciudad.
     </p>
 
-    <P>
+    <p>
       En esta versión del Módulo 7 se agregó un sistema de usuarios, autenticación, estado global y
       personalización de la experiencia según el usuario conectado.
-    </P>
+    </p>
 
     <div class="about-card">
       <h2>Funcionalidades principales</h2>

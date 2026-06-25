@@ -18,9 +18,7 @@ a {
   text-decoration: none;
 }
 
-/* =========================
-   HEADER / NAVBAR
-========================= */
+
 
 .header {
   background: linear-gradient(135deg, #0d6efd, #00b4d8);
@@ -88,7 +86,7 @@ a {
 }
 
 .btn-salir {
-  background-color: #dc2626;
+  background-color: #e76f51;
   color: white;
   border: none;
   padding: 10px 22px;
@@ -104,12 +102,10 @@ a {
 }
 
 .btn-salir:hover {
-  background-color: #b91c1c;
+  background-color: #e76f51;
 }
 
-/* =========================
-   CONTENEDOR GENERAL
-========================= */
+
 
 .contenedor {
   width: min(1100px, 92%);
@@ -117,9 +113,7 @@ a {
   padding: 30px 0;
 }
 
-/* =========================
-   HOME / INTRO
-========================= */
+
 
 .intro {
   text-align: center;
@@ -147,9 +141,7 @@ a {
   margin-top: 14px;
 }
 
-/* =========================
-   FORMULARIO HOME
-========================= */
+
 
 .formulario {
   display: flex;
@@ -185,9 +177,7 @@ a {
   background: #084298;
 }
 
-/* =========================
-   MENSAJES
-========================= */
+
 
 .mensaje {
   text-align: center;
@@ -209,9 +199,7 @@ a {
   font-size: 18px;
 }
 
-/* =========================
-   GRID HOME Y CARDS
-========================= */
+
 
 .grid {
   display: grid;
@@ -303,9 +291,7 @@ a {
   background: #146c43;
 }
 
-/* =========================
-   FAVORITOS M7
-========================= */
+
 
 .card-contenedor {
   display: flex;
@@ -342,9 +328,83 @@ a {
   justify-content: center;
 }
 
-/* =========================
-   DETALLE VIEW
-========================= */
+.favoritos-page {
+  min-height: calc(100vh - 160px);
+}
+
+.favoritos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.favorito-card {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(13, 110, 253, 0.12);
+  border-top: 6px solid #0d6efd;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.favorito-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px rgba(13, 110, 253, 0.18);
+}
+
+.favorito-icono {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.favorito-card h2 {
+  color: #0d6efd;
+  margin: 8px 0 12px;
+}
+
+.favorito-card p {
+  color: #334155;
+  line-height: 1.5;
+}
+
+.btn-eliminar {
+  background: #e76f51;
+  color: white;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.btn-eliminar:hover {
+  background: #d45d3f;
+}
+
+.sin-favoritos {
+  max-width: 520px;
+  margin: 40px auto 0;
+  background: white;
+  padding: 34px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(13, 110, 253, 0.12);
+}
+
+.sin-favoritos h2 {
+  color: #0d6efd;
+}
+
+.sin-favoritos p {
+  color: #334155;
+  line-height: 1.5;
+}
+
+
+
 
 .detalle-page {
   padding: 32px 20px;
@@ -412,9 +472,7 @@ a {
   display: block;
 }
 
-/* =========================
-   PRONÓSTICO Y ESTADÍSTICAS
-========================= */
+
 
 .grid-pronostico,
 .grid-estadisticas {
@@ -461,9 +519,7 @@ a {
   color: #0d6efd;
 }
 
-/* =========================
-   COLORES SEGÚN CLIMA
-========================= */
+
 
 .card-soleado {
   background: linear-gradient(180deg, #fff7d6, #ffffff);
@@ -520,9 +576,7 @@ a {
   border-top: 6px solid #16a34a;
 }
 
-/* =========================
-   ABOUT
-========================= */
+
 
 .about {
   max-width: 900px;
@@ -562,9 +616,7 @@ a {
   line-height: 1.8;
 }
 
-/* =========================
-   LOGIN / REGISTRO / PERFIL M7
-========================= */
+
 
 .pagina-formulario {
   min-height: calc(100vh - 160px);
@@ -675,9 +727,7 @@ a {
   margin: 5px 0;
 }
 
-/* =========================
-   TEMA OSCURO M7
-========================= */
+
 
 .tema-claro {
   background: #eef5f9;
@@ -732,10 +782,23 @@ a {
   color: white;
   border-color: #475569;
 }
+.tema-oscuro .favorito-card,
+.tema-oscuro .sin-favoritos {
+  background: #1f2937;
+  color: #f9fafb;
+}
 
-/* =========================
-   RESPONSIVE
-========================= */
+.tema-oscuro .favorito-card h2,
+.tema-oscuro .sin-favoritos h2 {
+  color: #60a5fa;
+}
+
+.tema-oscuro .favorito-card p,
+.tema-oscuro .sin-favoritos p {
+  color: #cbd5e1;
+}
+
+
 
 @media (max-width: 768px) {
   .logo {
