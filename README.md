@@ -72,15 +72,16 @@ Contraseña: 123456
 
 
 ## Rutas de la aplicación
-
-### Ruta	       Descripción
-/	               Página principal con listado de ciudades y clima actual
-/about	           Información general del proyecto
-/detalle/:id	   Detalle del clima de una ciudad
-/login	           Inicio de sesión
-/registro	       Registro de usuario
-/favoritos	       Ruta protegida con ciudades favoritas
-/perfil	           Ruta protegida con preferencias del usuario
+ Markdown
+| Ruta | Descripción |
+|---|---|
+| `/` |	               Página principal con listado de ciudades y clima actual. |
+| `/about`	           Información general del proyecto. | 
+|`/detalle/:id` |    Detalle del clima de una ciudad. |
+|`/login` |	           Inicio de sesión. |
+|`/registro` |      Registro de usuario. |
+|`/favoritos`|	       Ruta protegida con ciudades favoritas. |
+|`/perfil` |	           Ruta protegida con preferencias del usuario. |
 
 
 ## Tecnologías utilizadas
