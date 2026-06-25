@@ -67,8 +67,10 @@ Si un usuario intenta ingresar a una ruta protegida sin estar autenticado, la ap
 
 Para probar el inicio de sesión se puede utilizar:
 
-Correo: nelly@test.com
-Contraseña: 123456
+|Campo | Valor |
+|---|---|
+|Correo | `nelly@test.com`|
+|Contraseña| `123456` |
 
 
 ## Rutas de la aplicación
@@ -164,9 +166,12 @@ El **guard** revisa si el usuario está autenticado. Si no lo está, se redirige
 
 ## Instalación del proyecto
 
-Clonar el repositorio:
+### Clonar el repositorio:
 
+Para descargar el proyecto en tu computador, ejecuta el siguiente comando:
+```sh
 git clone https://github.com/ferradasmane-droid/vue-app-clima-m7.git
+```
 
 Entrar a la carpeta del proyecto:
 
@@ -194,16 +199,10 @@ npm run build
 
 ## Repositorio
 
-Repositorio público en GitHub:
-
-https://github.com/ferradasmane-droid/vue-app-clima-m7
+[Ver epositorio público en GitHub](https://github.com/ferradasmane-droid/vue-app-clima-m7)
 
 
 ## Autora
 
 Nelly Ferrada
 
-![Vue](https://img.shields.io/badge/Vue-3-42b883)
-![Vite](https://img.shields.io/badge/Vite-Frontend-646cff)
-![Pinia](https://img.shields.io/badge/Pinia-State-yellow)
-![Router](https://img.shields.io/badge/Vue_Router-Rutas-0d6efd)
