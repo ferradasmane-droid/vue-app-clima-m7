@@ -105,33 +105,45 @@ Para probar el inicio de sesión se puede utilizar:
 ## Estructura principal del proyecto
 
 ```bash
-src/
-├── api/
-│   └── usuariosApi.js
-├── assets/
-│   └── main.css
-├── components/
-│   ├── ClimaCard.vue
-│   └── EstadisticasClima.vue
-├── data/
-│   ├── ciudades.js
-│   └── usuariosMock.js
-├── router/
-│   └── index.js
-├── services/
-│   └── ClimaServices.js
-├── stores/
-│   └── authStore.js
-├── views/
-│   ├── AboutView.vue
-│   ├── DetalleView.vue
-│   ├── FavoritosView.vue
-│   ├── HomeView.vue
-│   ├── LoginView.vue
-│   ├── PerfilView.vue
-│   └── RegistroView.vue
-├── App.vue
-└── main.js
+vue-app-clima-m7/
+├── docs/
+│   └── test-unitarios.png
+├── src/
+│   ├── api/
+│   │   └── usuariosApi.js
+│   ├── assets/
+│   │   ├── img/
+│   │   └── main.css
+│   ├── components/
+│   │   ├── __tests__/
+│   │   │   ├── ClimaCard.spec.js
+│   │   │   └── EstadisticasClima.spec.js
+│   │   ├── ClimaCard.vue
+│   │   └── EstadisticasClima.vue
+│   ├── data/
+│   │   ├── ciudades.js
+│   │   └── usuariosMock.js
+│   ├── router/
+│   │   └── index.js
+│   ├── services/
+│   │   └── ClimaServices.js
+│   ├── stores/
+│   │   ├── __tests__/
+│   │   │   └── authStore.spec.js
+│   │   └── authStore.js
+│   ├── views/
+│   │   ├── AboutView.vue
+│   │   ├── DetalleView.vue
+│   │   ├── FavoritosView.vue
+│   │   ├── HomeView.vue
+│   │   ├── LoginView.vue
+│   │   ├── PerfilView.vue
+│   │   └── RegistroView.vue
+│   ├── App.vue
+│   └── main.js
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
 ## Estado global con Pinia
