@@ -4,38 +4,52 @@
       <div class="intro">
         <h1>Mis lugares favoritos</h1>
         <p>
-          Esta sección depende del usuario conectado y está protegida por Vue Router.
+          Esta sección muestra las ciudades guardadas como favoritas por el usuario conectado.
         </p>
       </div>
 
-      <section v-if="authStore.favoritos.length > 0" class="favoritos-grid">
+      <section v-if="favoritosConImagen.length > 0" class="favoritos-grid">
         <article
-          v-for="favorito in authStore.favoritos"
-          :key="favorito"
+          v-for="ciudad in favoritosConImagen"
+          :key="ciudad.id"
           class="favorito-card"
         >
-          <div class="favorito-icono">🌦️</div>
+          <img
+            :src="ciudad.imagen"
+            :alt="ciudad.nombre"
+            class="favorito-img"
+          />
 
-          <h2>{{ favorito }}</h2>
+          <div class="favorito-contenido">
+            <div class="favorito-icono">⭐</div>
 
-          <p>
-            Guardado como ciudad favorita de
-            <strong>{{ authStore.nombreUsuario }}</strong>.
-          </p>
+            <h2>{{ ciudad.nombre }}</h2>
 
-          <button
-            class="btn-eliminar"
-            type="button"
-            @click="eliminarFavorito(favorito)"
-          >
-            Eliminar de favoritos
-          </button>
+            <p class="pais">
+              {{ ciudad.pais }}
+            </p>
+
+            <p class="texto-favorito">
+              Guardado como favorito de
+              <strong>{{ authStore.nombreUsuario }}</strong>.
+            </p>
+
+            <button
+              class="btn-eliminar"
+              type="button"
+              @click="eliminarFavorito(ciudad.nombre)"
+            >
+              Eliminar de favoritos
+            </button>
+          </div>
         </article>
       </section>
 
       <section v-else class="sin-favoritos">
         <div class="favorito-icono">⭐</div>
+
         <h2>Todavía no tienes ciudades favoritas</h2>
+
         <p>
           Vuelve al inicio y agrega una ciudad para verla en esta sección.
         </p>
@@ -49,10 +63,18 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useAuthStore } from '../stores/authStore'
+import { ciudadesBase } from '../data/ciudades'
 
 const authStore = useAuthStore()
+
+const favoritosConImagen = computed(() => {
+  return ciudadesBase.filter((ciudad) =>
+    authStore.favoritos.includes(ciudad.nombre)
+  )
+})
 
 const eliminarFavorito = (ciudad) => {
   authStore.eliminarFavorito(ciudad)
