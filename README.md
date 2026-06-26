@@ -153,6 +153,35 @@ Este store permite administrar:
 Pinia permite compartir estos datos entre distintas vistas sin repetir lógica en cada componente.
 
 
+## Pruebas unitarias
+
+Se implementaron pruebas unitarias utilizando Vitest y Vue Test Utils para verificar el correcto funcionamiento de componentes reutilizables y del estado global de la aplicación.
+
+Resultado Obtenido:
+
+![Resultado pruebas unitarias](./docs/test-unitarios.png)
+
+Las pruebas realizadas validan:
+
+- Renderizado correcto del componente `ClimaCard.vue`.
+- Conversión de temperatura entre Celsius y Fahrenheit.
+- Enlace de navegación hacia el detalle de una ciudad.
+- Cálculo de temperatura mínima, máxima y promedio en `EstadisticasClima.vue`.
+- Funcionamiento del `authStore.js` para agregar, evitar duplicados y eliminar favoritos.
+
+Archivos testeados:
+
+- `ClimaCard.vue`
+- `EstadisticasClima.vue`
+- `authStore.js`
+
+
+Para ejecutar las pruebas unitarias:
+
+```sh
+npm run test:unit
+```
+
 ## Protección de rutas
 
 La protección de rutas se implementó mediante un guard de Vue Router.
